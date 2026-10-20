@@ -1,0 +1,19 @@
+{
+  "classes": [
+    "car",
+    "bus"
+  ],
+  "img_size": 224,
+  "grid": 7,
+  "n_backbone": 11176512,
+  "n_head": 33351,
+  "n_params": 11209863,
+  "epochs": 400,
+  "train_time_min": 8.21,
+  "mAP_05": 0.0738,
+  "AP_car": 0.0424,
+  "AP_bus": 0.1053,
+  "train_samples": 459,
+  "val_samples": 410,
+  "final_loss": 0.0301
+}

@@ -1,0 +1,71 @@
+==============================================================
+实验3 简化版 YOLOv8 车辆检测  (预训练骨干 + 检测头, CPU)
+==============================================================
+训练样本(含车辆): 459  验证样本: 410
+类别: ['car', 'bus']  | 输入 224 网格 7x7
+骨干(冻结)参数量: 11,176,512
+检测头(可训练)参数量: 33,351
+模型总参数量: 11,209,863
+
+[1/3] 提取训练特征（每图 2 个增强版本）...
+  特征提取 100/459
+  特征提取 200/459
+  特征提取 300/459
+  特征提取 400/459
+  训练特征: (918, 512, 7, 7)  (0.6 min)
+[2/3] 提取验证特征...
+  特征提取 100/410
+  特征提取 200/410
+  特征提取 300/410
+  特征提取 400/410
+  验证特征: (410, 512, 7, 7)  (0.8 min)
+
+[3/3] 训练检测头 400 轮 (batch=32, lr=0.01)...
+[ep   1] loss 7.6746 | val mAP@0.5 0.0428 AP(car)=0.0424 AP(bus)=0.0432 | best 0.0428 | 0.9min
+[ep  10] loss 1.4821 | val mAP@0.5 0.1006 AP(car)=0.1225 AP(bus)=0.0788 | best 0.1006 | 1.0min
+[ep  20] loss 0.9508 | val mAP@0.5 0.0653 AP(car)=0.0779 AP(bus)=0.0527 | best 0.1006 | 1.2min
+[ep  30] loss 0.7494 | val mAP@0.5 0.1054 AP(car)=0.0894 AP(bus)=0.1213 | best 0.1054 | 1.3min
+[ep  40] loss 0.5861 | val mAP@0.5 0.0878 AP(car)=0.0576 AP(bus)=0.1180 | best 0.1054 | 1.5min
+[ep  50] loss 0.5075 | val mAP@0.5 0.0481 AP(car)=0.0384 AP(bus)=0.0579 | best 0.1054 | 1.7min
+[ep  60] loss 0.4362 | val mAP@0.5 0.0611 AP(car)=0.0674 AP(bus)=0.0547 | best 0.1054 | 1.9min
+[ep  70] loss 0.3910 | val mAP@0.5 0.0630 AP(car)=0.0598 AP(bus)=0.0662 | best 0.1054 | 2.0min
+[ep  80] loss 0.3715 | val mAP@0.5 0.0555 AP(car)=0.0553 AP(bus)=0.0557 | best 0.1054 | 2.2min
+[ep  90] loss 0.3250 | val mAP@0.5 0.0584 AP(car)=0.0482 AP(bus)=0.0687 | best 0.1054 | 2.4min
+[ep 100] loss 0.2772 | val mAP@0.5 0.1059 AP(car)=0.1098 AP(bus)=0.1020 | best 0.1059 | 2.6min
+[ep 110] loss 0.2942 | val mAP@0.5 0.0649 AP(car)=0.0703 AP(bus)=0.0594 | best 0.1059 | 2.8min
+[ep 120] loss 0.2741 | val mAP@0.5 0.0519 AP(car)=0.0485 AP(bus)=0.0553 | best 0.1059 | 3.0min
+[ep 130] loss 0.2721 | val mAP@0.5 0.0527 AP(car)=0.0718 AP(bus)=0.0337 | best 0.1059 | 3.2min
+[ep 140] loss 0.2598 | val mAP@0.5 0.0590 AP(car)=0.0730 AP(bus)=0.0450 | best 0.1059 | 3.4min
+[ep 150] loss 0.2319 | val mAP@0.5 0.1028 AP(car)=0.0903 AP(bus)=0.1153 | best 0.1059 | 3.6min
+[ep 160] loss 0.2035 | val mAP@0.5 0.0564 AP(car)=0.0558 AP(bus)=0.0570 | best 0.1059 | 3.7min
+[ep 170] loss 0.2013 | val mAP@0.5 0.0853 AP(car)=0.0493 AP(bus)=0.1212 | best 0.1059 | 3.9min
+[ep 180] loss 0.1821 | val mAP@0.5 0.0377 AP(car)=0.0473 AP(bus)=0.0281 | best 0.1059 | 4.1min
+[ep 190] loss 0.1665 | val mAP@0.5 0.0385 AP(car)=0.0450 AP(bus)=0.0320 | best 0.1059 | 4.3min
+[ep 200] loss 0.1518 | val mAP@0.5 0.0562 AP(car)=0.0500 AP(bus)=0.0623 | best 0.1059 | 4.5min
+[ep 210] loss 0.1286 | val mAP@0.5 0.0452 AP(car)=0.0471 AP(bus)=0.0433 | best 0.1059 | 4.7min
+[ep 220] loss 0.1207 | val mAP@0.5 0.0379 AP(car)=0.0411 AP(bus)=0.0346 | best 0.1059 | 4.9min
+[ep 230] loss 0.1200 | val mAP@0.5 0.0486 AP(car)=0.0570 AP(bus)=0.0402 | best 0.1059 | 5.1min
+[ep 240] loss 0.1016 | val mAP@0.5 0.0548 AP(car)=0.0444 AP(bus)=0.0652 | best 0.1059 | 5.3min
+[ep 250] loss 0.1029 | val mAP@0.5 0.0509 AP(car)=0.0426 AP(bus)=0.0591 | best 0.1059 | 5.4min
+[ep 260] loss 0.0884 | val mAP@0.5 0.0407 AP(car)=0.0499 AP(bus)=0.0315 | best 0.1059 | 5.6min
+[ep 270] loss 0.0809 | val mAP@0.5 0.0553 AP(car)=0.0527 AP(bus)=0.0579 | best 0.1059 | 5.8min
+[ep 280] loss 0.0680 | val mAP@0.5 0.0769 AP(car)=0.0496 AP(bus)=0.1042 | best 0.1059 | 6.0min
+[ep 290] loss 0.0684 | val mAP@0.5 0.0785 AP(car)=0.0512 AP(bus)=0.1058 | best 0.1059 | 6.1min
+[ep 300] loss 0.0621 | val mAP@0.5 0.0512 AP(car)=0.0452 AP(bus)=0.0573 | best 0.1059 | 6.3min
+[ep 310] loss 0.0461 | val mAP@0.5 0.0773 AP(car)=0.0505 AP(bus)=0.1042 | best 0.1059 | 6.5min
+[ep 320] loss 0.0445 | val mAP@0.5 0.0547 AP(car)=0.0503 AP(bus)=0.0591 | best 0.1059 | 6.7min
+[ep 330] loss 0.0444 | val mAP@0.5 0.0745 AP(car)=0.0449 AP(bus)=0.1042 | best 0.1059 | 6.9min
+[ep 340] loss 0.0374 | val mAP@0.5 0.0778 AP(car)=0.0492 AP(bus)=0.1064 | best 0.1059 | 7.0min
+[ep 350] loss 0.0361 | val mAP@0.5 0.0764 AP(car)=0.0490 AP(bus)=0.1039 | best 0.1059 | 7.3min
+[ep 360] loss 0.0336 | val mAP@0.5 0.0775 AP(car)=0.0511 AP(bus)=0.1039 | best 0.1059 | 7.4min
+[ep 370] loss 0.0330 | val mAP@0.5 0.0761 AP(car)=0.0478 AP(bus)=0.1044 | best 0.1059 | 7.6min
+[ep 380] loss 0.0302 | val mAP@0.5 0.0776 AP(car)=0.0509 AP(bus)=0.1042 | best 0.1059 | 7.8min
+[ep 390] loss 0.0308 | val mAP@0.5 0.0765 AP(car)=0.0480 AP(bus)=0.1051 | best 0.1059 | 8.0min
+[ep 400] loss 0.0301 | val mAP@0.5 0.0781 AP(car)=0.0502 AP(bus)=0.1061 | best 0.1059 | 8.2min
+
+已恢复验证集最优权重 (sub-val mAP=0.1059)
+
+[FINAL] mAP@0.5 = 0.0738  AP(car)=0.0424 AP(bus)=0.1053  用时 8.21 min
+
+[SUMMARY] {"classes": ["car", "bus"], "img_size": 224, "grid": 7, "n_backbone": 11176512, "n_head": 33351, "n_params": 11209863, "epochs": 400, "train_time_min": 8.21, "mAP_05": 0.0738, "AP_car": 0.0424, "AP_bus": 0.1053, "train_samples": 459, "val_samples": 410, "final_loss": 0.0301}
+[DONE]
